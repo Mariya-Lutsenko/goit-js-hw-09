@@ -24,7 +24,6 @@ img {
   column-gap: 30px;
 }
 .field > .label {
-  color: dodgerblue;
   font-size: xx-large;
 
 }
@@ -38,7 +37,6 @@ img {
 
 .value {
   font-size: xx-large;
-  color: dodgerblue;
 
 }
 
@@ -48,12 +46,8 @@ img {
   font-size: x-large;
   font-weight: bold;
   font-size: x-large;
-  border-color: dodgerblue;
 }
 
 button {
  font-size: x-large;
- background-color: dodgerblue;
- color: #FFFF00;
- border-color: #FFFF00;
 }
