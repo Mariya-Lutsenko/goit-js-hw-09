@@ -10,9 +10,50 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  /* display: flex;
+  align-items: center; */
+
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+.timer {
+  display: flex;
+  column-gap: 30px;
+}
+.field > .label {
+  color: dodgerblue;
+  font-size: xx-large;
+
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.value {
+  font-size: xx-large;
+  color: dodgerblue;
+
+}
+
+
+#datetime-picker {
+  box-sizing: border-box;
+  font-size: x-large;
+  font-weight: bold;
+  font-size: x-large;
+  border-color: dodgerblue;
+}
+
+button {
+ font-size: x-large;
+ background-color: dodgerblue;
+ color: #FFFF00;
+ border-color: #FFFF00;
 }
