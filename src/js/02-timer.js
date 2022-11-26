@@ -51,6 +51,12 @@ const options = {
     return { days, hours, minutes, seconds };
   };
   
+  function updateTimerContent ({days, hours, minutes, seconds}) {
+            daysLabel.textContent = addLeadingZero(days);
+            hoursLabel.textContent = addLeadingZero(hours);
+            minutesLabel.textContent = addLeadingZero(minutes);
+            secondsLabel.textContent = addLeadingZero(seconds);
+  }
 
 //   число перводить у рядок та додає до 2 знаків зліва нулі
   function addLeadingZero (value) {
@@ -66,16 +72,19 @@ const options = {
         startBtn.disabled = true;
         if (deltaTime >= 0) {
             // Об'єкт з днями, годинами, мінутами та секундами, значення яких обчислено за допомогою функції convertMs
-            const {days, hours, minutes, seconds} = convertMs(deltaTime);
-            daysLabel.textContent = addLeadingZero(days);
-            hoursLabel.textContent = addLeadingZero(hours);
-            minutesLabel.textContent = addLeadingZero(minutes);
-            secondsLabel.textContent = addLeadingZero(seconds);
+            const timeObject = convertMs(deltaTime);
+            updateTimerContent (timeObject);
+            dataTime.disabled = true;
+
         }
         else {
             Notiflix.Notify.success('Countdown finished');
             clearInterval(timerId);
+            dataTime.disabled = false;
         }
     }, 1000);
 
   };
+
+
+  
